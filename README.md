@@ -16,4 +16,5 @@ The code shown here is a very small piece of a large system I have been working 
 ![AdvAndVals](https://github.com/user-attachments/assets/44ec0e5e-9e87-429d-b431-1ff84224728a)
 
 This is obviously not meant to be an exhaustive description of the process of CFR. But hopefully it's enough to convince you - whoever you are - that I know how to do things with numbers :)
+
 I am happy to post more of the codebase for this project on request.

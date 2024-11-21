@@ -1,5 +1,5 @@
 # Purpose of this repo
-This was created to display a snapshot of code for purposes of (hopefully) demonstrating competence for STEM and Comp Sci projects.
+This was created to display a snapshot of code for purposes of (hopefully) demonstrating competence for STEM and CompSci projects.
 The code shown here is a very small piece of a large system I have been working on for several years which implements the Counterfactual Regret Minimization (CFR) algorithm from game theory. It is a set of functions for a class called `CFRCollector` which traverses a poker game tree to collect data samples to be used as training targets for a neural network whose purpose is to estimate advantages (a quantity analogous to expected value) for player actions. Advantage has to be calculated in a specific way by tracing paths travelled through the game tree during data collection. This calculation phase is done immediately after collection of raw data samples has been done, and before using the calculated advantages as training targets for the neural network. The functions contained herein implement the operations necessary for these calculations and save the results to a file which can then later be read from during the training process. Specifically, what is being implemented is ultimately computation of `α(I,a)` in the equations in the attached image, where:
 
 * `I` is an Infoset, which is a representation of player-observable information about a gamestate
@@ -16,3 +16,4 @@ The code shown here is a very small piece of a large system I have been working 
 ![AdvAndVals](https://github.com/user-attachments/assets/44ec0e5e-9e87-429d-b431-1ff84224728a)
 
 This is obviously not meant to be an exhaustive description of the process of CFR. But hopefully it's enough to convince you - whoever you are - that I know how to do things with numbers :)
+I am happy to post more of the codebase for this project on request.

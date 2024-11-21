@@ -7,9 +7,10 @@ The code shown here is a very small piece of a large system I have been working 
 * `h` is a game history, i.e. a sequence of actions taken by players (where random chance is treated as a 'player') up to some game position
 * `z` is a terminal game history, i.e. an endgame position, where a winner is decided and winnings are paid out
 * `Z[I]` is the set of all reachable endgame states from the game position represented by `I`
+* `uᵢ(z)` is the payout (aka utility) to player `i` from endgame `z`
 * `t` is iteration number, where one iteration is a full cycle of: collect data → calculate `α` targets from collected data → train neural net to estimate `α` more accurately
 * `σ` is a stochastic player strategy mapping state observation `I` to a probability distribution over actions `a`, where `σ(I,a) ∝ α(I,a)`
-* `π(h)` is a reach probability, i.e. the probability of history `h` happening, given iteration strategy `σᵗ` (more traditional probability notation would denote this as `π(h|σᵗ)`, i.e. the probability of a particular sequence of player actions is obviously dependent on the players' strategies)
+* `π(h)` is a reach probability, i.e. the probability of history `h` happening, given iteration strategy `σᵗ` (more traditional probability notation would denote this as `π(h|σᵗ)`, i.e. the probability of a particular sequence of player actions is obviously dependent on the players' strategies). Subscripting such as `πᵢ(h)` indicates "reach probability of h, only considering the probability of actions of player `i`, while the subscript `-i` means "reach probability of h, considering the action probabilities of all players EXCEPT FOR `i`.
 * `v(I,a)` quantities, then, basically represent expected values, from which advantage targets are calculated
   
 ![AdvAndVals](https://github.com/user-attachments/assets/44ec0e5e-9e87-429d-b431-1ff84224728a)

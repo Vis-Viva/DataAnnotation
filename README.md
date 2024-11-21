@@ -4,7 +4,7 @@ The code shown here is a very small piece of a large system I have been working 
 * `I` is an Infoset, which is a representation of the information about a gamestate that can be observed by a player
 * `a` is an action available to the player at some game position
 * `h` is a game history, i.e. a sequence of actions taken by players and random chance up to some game position
-* `t` is iteration, where one iteration is a full cycle of: collect data → calculate `α` from collected data → train neural net to estimate `α` more accurately
+* `t` is iteration, where one iteration is a full cycle of: collect data → calculate `α` targets from collected data → train neural net to estimate `α` more accurately
 * `σ` is a stochastic player strategy mapping state observation `I` to a probability distribution over actions `a`, where `σ(I,a) ∝ α(I,a)`
 * `π(h)` is a reach probability, i.e. the probability of history `h` happening, given iteration strategy `σᵗ`
 * `v(I,a)` quantities, then, basically represent expected values, from which advantage targets are calculated

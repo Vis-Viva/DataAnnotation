@@ -5,6 +5,8 @@ The code shown here is a very small piece of a large system I have been working 
 * `I` is an Infoset, which is a representation of player-observable information about a gamestate
 * `a` is an action available to the player at some game position
 * `h` is a game history, i.e. a sequence of actions taken by players (where random chance is treated as a 'player') up to some game position
+* `z` is a terminal game history, i.e. an endgame position, where a winner is decided and winnings are paid out
+* `Z[I]` is the set of all reachable endgame states from the game position represented by `I`
 * `t` is iteration number, where one iteration is a full cycle of: collect data → calculate `α` targets from collected data → train neural net to estimate `α` more accurately
 * `σ` is a stochastic player strategy mapping state observation `I` to a probability distribution over actions `a`, where `σ(I,a) ∝ α(I,a)`
 * `π(h)` is a reach probability, i.e. the probability of history `h` happening, given iteration strategy `σᵗ` (more traditional probability notation would denote this as `π(h|σᵗ)`, i.e. the probability of a particular sequence of player actions is obviously dependent on the players' strategies)

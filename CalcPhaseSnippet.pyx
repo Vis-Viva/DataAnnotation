@@ -4,8 +4,8 @@ I have made zero modifications to this code to make it fully comprehensible to o
 impossible without including a huge amount of additional code anyway. The comments you see are comments that were 
 already in this code to make it more readable to myself, because I find math syntax much much easier to read than code.
 For this reason, I have a comment above many of these functions which contains the equation/expression implemented by
-that function.
-I will say this though: ll = long long, and stuff like 'flt3' is just a 3-dimensional 32bit float array. 
+that function. This code is not here to be fully readable, it is just here to hopefully demonstrate competence.
+I will say this though: ll = long long, flt3 = 3-dim float array, int2 = 2-dim int array, etc 
 """
 
 

@@ -407,7 +407,6 @@ I will say this though: ll = long long, flt3 = 3-dim float array, int2 = 2-dim i
 			uint  nA                 = vIA.shape[ 0 ]
 			flt1  aAdvs              = cyarr( (nA,), FLTSIZE, 'f' )
 
-		#METANATION VISUALIZATION
 		if totalLinearReach==0: aAdvs[:]=0
 		else:                   aAdvs = NP( totalLinearRegrets,dtype=f32 ) / totalLinearReach
 		return aAdvs #(|A|,)
